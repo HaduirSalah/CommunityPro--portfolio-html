@@ -172,10 +172,6 @@ Task Description: Prevent user from selecting images, icons, links, and buttons,
 /* Apply this style to the elements you want to prevent selection on */
 .prevent-select {
   user-select: none; /* Standard syntax */
-  -webkit-user-select: none; /* Safari/Chrome */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  pointer-events: none; /* Disable pointer events to prevent click-through */
 }
 
 /* Media Queries */
