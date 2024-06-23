@@ -40,7 +40,8 @@ toggleSwitch.addEventListener("change", switchTheme, false);
 
 
 // Save user preference on load
-
+const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+// console.log(darkModeMediaQuery);
 const currentTheme = localStorage.getItem("theme")
   ? localStorage.getItem("theme")
   : null;
@@ -50,6 +51,11 @@ if (currentTheme) {
 
   if (currentTheme === "dark") {
     toggleSwitch.checked = true;
+  }
+  else if (darkModeMediaQuery) {
+    document.documentElement.setAttribute("data-theme", "dark");
+    toggleSwitch.checked = true;
+
   }
 }
 
